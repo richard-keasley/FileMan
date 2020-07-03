@@ -24,6 +24,3 @@ icomoon font
 https://icomoon.io/
 
 IcoMoon font is used to create icons.
-
-h good
-
