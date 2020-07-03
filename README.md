@@ -1,17 +1,16 @@
 Simple File Manager for website content, compatible with Tiny MCE
 
-Dependencies
-===
+## Dependencies
 
-PHP 
----
+
+### PHP 
+
 Nothing extreme
 
-jQuery 
----
-Including the UI style sheet. No ui components are used directly by FileMan. 
+### jQuery 
 
-plupload relies on jQuery and jQuery-ui.
+- Include the UI style sheet. No ui components are used directly by FileMan. 
+- plupload relies on jQuery and jQuery-ui.
 
 plupload 
 --
