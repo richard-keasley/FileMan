@@ -7,7 +7,7 @@ Simple File Manager for website content, compatible with Tiny MCE
 
 Nothing extreme
 
-### jQuery 
+### jQuery https://jquery.com/
 
 Include the UI style sheet. No ui components are used directly by FileMan.<br>
 plupload relies on jQuery and jQuery-ui.
