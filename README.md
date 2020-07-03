@@ -9,17 +9,13 @@ Nothing extreme
 
 ### jQuery 
 
-- Include the UI style sheet. No ui components are used directly by FileMan. 
-- plupload relies on jQuery and jQuery-ui.
+Include the UI style sheet. No ui components are used directly by FileMan.<br>
+plupload relies on jQuery and jQuery-ui.
 
-plupload 
---
-https://www.plupload.com/
+### plupload  https://www.plupload.com/
 
 Plupload is included in the plug-in add_file. It can be replaced if you want.
 
-icomoon font
---
-https://icomoon.io/
+### icomoon font https://icomoon.io/
 
 IcoMoon font is used to create icons.
