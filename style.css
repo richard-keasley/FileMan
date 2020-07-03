@@ -1,0 +1,114 @@
+.fileman .msg {
+	border: 0;
+	padding: 0;
+	margin: 0.5em 0;
+}
+.fileman .msg li {
+	list-style: none;
+}
+
+.fileman .buttonbar button:before {
+	font-family: 'IcoMoon';
+	font-style: normal;
+	display: inline-block;
+	font-size: 1.2em;
+	content: '\0037';
+}
+.fileman .buttonbar button[data-process=add_dir]:before {
+	content: '\002a';
+	color: #090;
+}
+.fileman .buttonbar button[data-process=add_file]:before {
+	content: '\e022';
+	color: #909;
+}
+
+.fileman .path {
+	list-style: none;
+	border: 0;
+	margin: .5em 0;
+	padding: 0 ;
+}
+.fileman .path li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	
+}
+.fileman .path li:after {
+	content: '/';
+	padding: 0 .5em;
+}
+
+.fileman .files {
+	list-style: none;
+	border: 0;
+	margin: 1em 0;
+	padding: 0;
+	column-width:20em;
+}
+.fileman .files li {
+	position: relative;
+	display: inline-block;
+	width:20em;
+	line-height:2em;
+	background: #fff;
+	border: 1px solid #fff;
+	padding: 0 .1em;
+	margin: 0;
+}
+.fileman .files li.dir { color: #066; }
+.fileman .files li.link { color: #606; }
+.fileman .files li > .process {
+	display: block;
+}
+.fileman .files li > .process.selected {
+	background: #cec;
+}
+.fileman .files li:hover,
+.fileman .files li:hover > .process.selected {
+	background: #ffd;
+	border-color: #ccc;
+}
+
+.fileman .files li .process:before {
+	font-family: 'IcoMoon';
+	font-style: normal;
+	margin: 0 0.3em 0 0;
+	display: inline;
+	content: "\0045"; 
+}
+.fileman .files li.link > .process:before { content: "\0026"; }
+.fileman .files li.dir > .process:before { content: "\002d"; }
+.fileman .files li.dir[data-type=parent] > .process:before { content: "\0028"; }
+.fileman .files li.file > .process:before { content: "\e016"; }
+.fileman .files li.file[data-type=image] > .process:before { content: "\002f"; }
+.fileman .files li.file[data-type=audio] > .process:before { content: "\0057"; }
+.fileman .files li.file[data-type=video] > .process:before { content: "\0056"; }
+.fileman .files li.file[data-type=unknown] > .process:before { content: "\0045"; }
+
+.fileman .files li .procicons {
+	position: absolute;
+	background: #ffd;
+	top: -2.1em;
+	left: 4em;
+	display: none;
+	opacity: .7;
+	line-height: 2em;
+	min-width: 3em;
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-color: #ccc;
+	border-radius: .5em .5em 0 0;
+}
+.fileman .files li .procicons .process { margin: 0 .5em; }
+.fileman .files li .procicons .process:before { content:'\0037'; } 
+.fileman .files li .procicons .process[data-method=del]:before { 
+	content:'\004c'; color:#900;
+}
+.fileman .files li .procicons .process[data-method=preview]:before { 
+	content:'\003c'; color:#009;
+}
+
+.fileman .files li:hover .procicons { display: block; }
+.fileman .files li .procicons:hover { opacity:1; }
