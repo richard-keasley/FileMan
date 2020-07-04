@@ -1,6 +1,6 @@
 Simple File Manager for website content, compatible with Tiny MCE.
 
-### Dependencies
+**Dependencies**
 
 - *PHP:* Nothing extreme
 - *jQuery:* Include the UI style sheet. No ui components are used directly by FileMan.
