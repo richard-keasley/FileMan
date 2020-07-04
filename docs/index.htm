@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="File Manager">
+<meta name="description" content="FileMan File Manager">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Richard Keasley">
-<title>FileManager</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
+<link href="/INC/icofont/style.css" rel="stylesheet" type="text/css" media="all">
+<title>FileMan</title>
 </head>
 <body>
-<h1>File Manager</h1>
+<h1>FileMan</h1>
 
 <h2>Introduction</h2>
 <p>There are three verbs: "get", "add", "del". These three verbs act on the following objects: "file", "dir", "settings". A command comprises (verb)_(object). E.g. <code>get_dir, del_dir, get_settings</code>. </p>
@@ -43,12 +47,12 @@
 <dd><strong>NB:</strong> If file is outside of <code>url_root</code> HTML values will be returned empty.</dd>
 
 <dt>fm_root</dt>
-<dd>base path for File Manager. The File Manager can not work outside of this path.</dd>
+<dd>base path for FileMan. The FileMan can not work outside of this path.</dd>
 <dd><strong>NB:</strong> If <code>fm_root</code> is outside of <code>url_root</code> HTML values will be returned empty.</dd>
 
 <dt>upload_types</dt> 
 <dd>Use <code>type=>extensions</code>.</dd>
-<dd><strong>Example:</strong> <code>'image' => 'jpg,gif,png'</code>. Only files with the given extensions can be uploaded. The File Manager can filtered to only allow the extensions in the filtered type to be shown or uploaded.</dd>
+<dd><strong>Example:</strong> <code>'image' => 'jpg,gif,png'</code>. Only files with the given extensions can be uploaded. The FileMan can filtered to only allow the extensions in the filtered type to be shown or uploaded.</dd>
 <dd><strong>File icons</strong> are set according to <code>upload_type filter</code>.</dd>
 </dl>
 
@@ -56,7 +60,7 @@
 <ul>
 <li>Include the main <code>include.php</code></li>
 <li>Put the containing elements in</li>
-<li>Use jQuery to initialize the File Manager</li>
+<li>Use jQuery to initialize the FileMan</li>
 </ul>
 <p>Plug-ins appear as buttons in the button bar. Note plug-in elements are not loaded until the corresponding button is clicked.</p>
 <p>The file manager is set up with the "init" method: <code>FileMan.init(selector=0, fm_path='', filter='')</code>. Leave all values blank for the default popup to be created.</p>
@@ -64,9 +68,9 @@
 <dt>selector (string)</dt>
 <dd>String to describe element. This will be used as a jQuery object <code>$(selector)</code>. Leave it blank for default pop-up dialog.</dd>
 <dt>fm_path (string)</dt>
-<dd>The start path for File Manager. Note: This path is relative to <code>fm_root</code> in settings. Leave it blank for <code>fm_root</code>.</dt>
+<dd>The start path for FileMan. Note: This path is relative to <code>fm_root</code> in settings. Leave it blank for <code>fm_root</code>.</dt>
 <dt>filter (string)</dt>
-<dd>The filter to use for File Manager (including uploads). NB: This should be one of the <code>upload_types</code> in settings. Leave it blank to show all files. Note: Even if there is no filter, you can only upload file types registered <code>upload_types</code>.</dd>
+<dd>The filter to use for FileMan (including uploads). NB: This should be one of the <code>upload_types</code> in settings. Leave it blank to show all files. Note: Even if there is no filter, you can only upload file types registered <code>upload_types</code>.</dd>
 </dl>  
 
 <h2>Examples</h2>

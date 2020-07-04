@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="File Manager">
+<meta name="description" content="FileMan">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Richard Keasley">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
 <link href="/INC/icofont/style.css" rel="stylesheet" type="text/css" media="all">
-
-<title>File Manager - popup 2</title>
+<title>FileMan - popup 2</title>
 </head>
 <body>
-<h1>File Manager</h1>
+<h1>FileMan - popup 2</h1>
 <p><a href=".">back</a></p>
 <h2>Dialog with start folder and filter</h2>
 
