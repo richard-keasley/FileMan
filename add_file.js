@@ -1,13 +1,4 @@
-/*
-FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', src:'/INC/plupload-2.3.6/js/plupload.full.min.js'}]);
-FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', 
-	src:'/INC/plupload-2.3.6/js/jquery.plupload.queue/jquery.plupload.queue.min.js'}]);
-FileMan.head.push(['link', {type:'text/css', rel:'stylesheet', href:'/INC/plupload-2.3.6/js/jquery.plupload.queue/css/jquery.plupload.queue.css'}]);
-*/
-
 var url = fm_settings.url + '/plupload'
-console.log(url);
-
 FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', src: url+'/plupload.full.min.js'}]);
 FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', src: url+'/jquery.plupload.queue.min.js'}]);
 FileMan.head.push(['link', {type:'text/css', rel:'stylesheet', href: url+'/css/jquery.plupload.queue.css'}]);
