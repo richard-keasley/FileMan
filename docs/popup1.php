@@ -8,7 +8,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
-<link href="/INC/icofont/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../icomoon/style.css" rel="stylesheet" type="text/css" media="all">
 <title>FileMan - popup 1</title>
 </head>
 <body>
