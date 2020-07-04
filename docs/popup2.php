@@ -33,6 +33,25 @@ $(function() {
 });
 </script>
 
+<pre>
+&lt;?php include_once '{path-to-fileman}/include.php';?&gt;
+&lt;button name="popup"&gt;Fileman&lt;/button&gt;
+&lt;p&gt;Here is the value: &lt;span id="get_file"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;script&gt;
+$(function() {
+	var $btn = $('button[name=popup]').button();
+	$btn.click(function(){ 
+		var fileman_dialog = FileMan.init(0, '/test/test.jpg', 'image');
+		FileMan.get_file = function(listitem) {
+			$('#get_file').html(FileMan.item.html(listitem));
+			fileman_dialog.dialog('close');
+		};
+		fileman_dialog.dialog('open'); 
+	});
+});
+&lt;/script&gt;
+</pre>
+
 <p><a href=".">back</a></p>
 </body>
 </html>

@@ -30,7 +30,7 @@
 <dt>plupload<dt>
 <dd><a href="https://www.plupload.com/">Plupload</a> is included in the plug-in (<code>add_file</code>). It can be replaced if you want.</dd>
 <dt>icomoon font</dt>
-<dd><a href="https://icomoon.io/">IcoMoon font</a> is used to create icons.</dd>
+<dd><a href="https://icomoon.io/">IcoMoon font</a> is used to create icons. <a href="../icomoon/">View the icon set</a>.</dd>
 </dl>
 
 <h2>Settings</h2>
@@ -74,53 +74,11 @@
 </dl>  
 
 <h2>Examples</h2>
-<h3><a href="simple.php">simple</a></h3>
-<pre>
-&lt;?php include_once '{path-to-fileman}/include.php';?&gt;
-&lt;div id="fileman"&gt;&lt;/div&gt; 
-&lt;script&gt;
-$(function() {
-	var fileman_element = FileMan.init('#fileman');
-});
-&lt;/script&gt;
-</pre>
+<ul>
+<li><a href="simple.php">simple</a></li>
+<li><a href="popup1.php">Dialog</a></li>
+<li><a href="popup2.php">Dialog with start path and filter</a></li>
+</ul>
 
-<h3><a href="popup1.php">Dialog</a></h3>
-<pre>
-&lt;?php include_once '{path-to-fileman}/include.php';?&gt;
-&lt;button name="popup"&gt;Fileman&lt;/button&gt;
-&lt;p&gt;Here is the value: &lt;span id="get_file"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;script&gt;
-$(function() {
-	$('button[name=popup]').click(function(){ 
-		var fileman_dialog = FileMan.init();
-		FileMan.get_file = function(listitem) {
-			$('#get_file').html(FileMan.item.html(listitem));
-			fileman_dialog.dialog('close');
-		};
-		fileman_dialog.dialog('open'); 
-	});
-});
-&lt;/script&gt;
-</pre>
-
-<h3><a href="popup2.php">Dialog with start path and filter</a></h3>
-<pre>
-&lt;?php include_once '{path-to-fileman}/include.php';?&gt;
-&lt;button name="popup"&gt;Fileman&lt;/button&gt;
-&lt;p&gt;Here is the value: &lt;span id="get_file"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;script&gt;
-$(function() {
-	$('button[name=popup]').click(function(){ 
-		var fileman_dialog = FileMan.init(0, '/files/test.jpg', 'image');
-		FileMan.get_file = function(listitem) {
-			$('#get_file').html(FileMan.item.html(listitem));
-			fileman_dialog.dialog('close');
-		};
-		fileman_dialog.dialog('open'); 
-	});
-});
-&lt;/script&gt;
-</pre>
 </body>
 </html>

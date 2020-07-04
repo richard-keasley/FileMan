@@ -24,6 +24,16 @@ $(function() {
 });
 </script>
 
+<pre>
+&lt;?php include_once '{path-to-fileman}/include.php';?&gt;
+&lt;div id="fileman"&gt;File manager unavailable&lt;/div&gt; 
+&lt;script&gt;
+$(function() {
+	var fileman_element = FileMan.init('#fileman');
+});
+&lt;/script&gt;
+</pre>
+
 <p><a href=".">back</a></p>
 </body>
 </html>
