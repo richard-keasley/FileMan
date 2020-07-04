@@ -38,7 +38,7 @@ $(function() {
 <script>
 $(function() {
 	$('.nav .icon-undo').button();
-}
+});
 </script>
 </body>
 </html>
