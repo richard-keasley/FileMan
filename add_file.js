@@ -4,6 +4,8 @@ FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8',
 	src:'/INC/plupload-2.3.6/js/jquery.plupload.queue/jquery.plupload.queue.min.js'}]);
 FileMan.head.push(['link', {type:'text/css', rel:'stylesheet', 
 	href:'/INC/plupload-2.3.6/js/jquery.plupload.queue/css/jquery.plupload.queue.css'}]);
+	
+console.log(fm_settings);
 
 const dlg_add_file = {
 	selector: false,
