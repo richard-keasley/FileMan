@@ -21,7 +21,7 @@ const FileMan = {
 	init: function(selector=false) {
 		var html = 'error';
 		if(selector) {
-			return $(selector)html(html);
+			return $(selector).html(html);
 		}
 		else {
 			return $('<div id="fm-main">'+html+'<div>').dialog({
