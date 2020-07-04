@@ -1,6 +1,6 @@
 <?php 
 /* user settings 
-Do what you liek inthis file to setup permissions / etc. 
+Do what you like in this file to setup permissions / etc. 
 This is loaded early, no JS in here. 
 */
 
@@ -27,4 +27,3 @@ fm_settings::$fm_root  = DOCROOT . "/files";
 fm_settings::$upload_types['image'] = 'jpg,gif,png';
 fm_settings::$upload_types['pdf'] = 'pdf';
 
-echo '######';
