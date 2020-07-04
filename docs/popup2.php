@@ -10,7 +10,7 @@
 <link href="/INC/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all">
 <link href="/INC/icofont/style.css" rel="stylesheet" type="text/css" media="all">
 
-<title>File Manager - simple</title>
+<title>File Manager - popup 2</title>
 </head>
 <body>
 <h1>File Manager</h1>
