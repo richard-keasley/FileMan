@@ -1,3 +1,4 @@
+#1
 <?php
 require_once __DIR__ . '/settings.php'; 
 if(fm_settings::perms('get_dir')) {
@@ -16,6 +17,7 @@ if(fm_settings::perms('get_dir')) {
 	}
 }
 else { ?>
+#2
 <script>
 const FileMan = {
 	init: function(selector=false) {
@@ -32,4 +34,5 @@ const FileMan = {
 	}
 };
 </script>
+#3
 <?php }
