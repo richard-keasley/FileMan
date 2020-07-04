@@ -34,13 +34,14 @@
 </dl>
 
 <h2>Settings</h2>
-<p>Settings are all in <code>settings.php</code>. Note that "settings" is read-only from the front-end; it has to be edited in the php script.</p>
+<p>Settings are all in <code>settings.php</code>. Settings are read-only from the front-end. Edit them directly in the php script.</p>
 
 <dl>
 <dt>Permissions</dt>
 <dd>Nothing will work until permissions have been set. Permissions are held in the static array <code>perms</code> in <code>settings.php</code>.</dd>
 <dd><strong>Example:</strong> Permission to get a directory is granted as follows: <code>fm_settings::$perms[] = 'get_dir';</code></dd>
 <dd><strong>NB:</strong> You can't do anything if you don't have permission "get_dir". Make sure it's the first permission set.</dd>
+<dd>Possbible permissions are: get_dir, get_file, add_dir, add_file, del_dir, del_file, get_settings.</dd>
 
 <dt>url_root</dt>
 <dd>Website root path. Used to calculate HTML for file items (e.g. get_file).</dd>
