@@ -27,7 +27,7 @@ fm_settings::$upload_types['pdf'] = 'pdf';
 class fm_settings {
 const json_flags = JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR;
 static $url_root = '';  // website root path
-static $fm_root = DOCROOT . "/files"; // base path for FileMan
+static $fm_root = ''; // base path for FileMan
 static $upload_types = array(); // file types
 static $perms = array();
 
