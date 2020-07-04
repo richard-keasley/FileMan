@@ -17,7 +17,7 @@
 <p><a href=".">back</a></p>
 <h2>Dialog with start folder and filter</h2>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/INC/fileman/include.php';?>
+<?php include_once dirname(__DIR__) . '/include.php';?>
 <button name="popup">Fileman</button>
 <p>Here is the value: <span id="get_file"></span></p>
 <script>

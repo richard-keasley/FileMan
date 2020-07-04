@@ -17,7 +17,7 @@
 <p><a href=".">back</a></p>
 <h2>Simple</h2>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/INC/fileman/include.php';?>
+<?php include_once dirname(__DIR__) . '/include.php';?>
 <div id="fileman">File manager unavailable</div> 
 <script>
 $(function() {
