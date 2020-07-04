@@ -19,7 +19,7 @@ else { ?>
 <script>
 const FileMan = {
 	init: function(selector=false) {
-		var html = '<div class="ui-state-error icon-error">Access denied</div>');
+		var html = '<div class="ui-state-error icon-error">Access denied</div>';
 		return selector ? 
 			$(selector).html(html) : 
 			$('<div id="fm-main">'+html+'<div>').dialog({
