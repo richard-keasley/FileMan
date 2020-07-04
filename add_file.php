@@ -37,7 +37,7 @@ if(file_exists($filePath) && !fm_settings::perms('del_file')) add_file_die(100, 
 // check file extension
 $file_ext = pathinfo($fileName, PATHINFO_EXTENSION);
 $ok = 0;
-foreach(fm_settings::upload_types as $type=>$exts) {
+foreach(fm_settings::$upload_types as $type=>$exts) {
 	$exts = explode(',', $exts);
 	if(in_array($file_ext, $exts)) $ok = 1;
 }

@@ -80,10 +80,10 @@ static function check_access($function) {
 static function get_settings() {
 	self::check_access(__FUNCTION__);
 	$list = array(
-		'web_root' => fm_settings::url_root,
-		'file_manager_root' => fm_settings::fm_root,
+		'web_root' => fm_settings::$url_root,
+		'file_manager_root' => fm_settings::$fm_root,
 		'file_manager_url' => fm_settings::url(),
-		'upload_types' => fm_settings::upload_types,
+		'upload_types' => fm_settings::$upload_types,
 		'perms' => implode(', ', fm_settings::$perms)
 	);
 	
@@ -140,7 +140,7 @@ static function del_file() {
 
 static function listitem($filepath, $icons=0, $filter=0) {
 	self::check_access('get_dir');
-	$basename = $filepath==fm_settings::fm_root ? '[root]' : basename($filepath); 
+	$basename = $filepath==fm_settings::$fm_root ? '[root]' : basename($filepath); 
 	$filepath = realpath($filepath);
 	if(!$filepath) return '';
 

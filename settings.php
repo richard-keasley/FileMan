@@ -1,6 +1,6 @@
-<?php
+<?php 
+/* user settings */
 require_once "$_SERVER[DOCUMENT_ROOT]/common.php";
-
 /* permissions */
 if(HattSite::$siteACL->hasPermission('inventory_view')) {
 	fm_settings::$perms[] = 'get_dir';
@@ -15,18 +15,20 @@ if(HattSite::$siteACL->hasPermission('site_admin')) {
 	fm_settings::$perms[] = 'del_dir';
 	fm_settings::$perms[] = 'get_settings';
 }
-
-class fm_settings {
-const url_root = DOCROOT; // website root path
-const fm_root = DOCROOT . "/files"; // base path for FileMan
-const upload_types = array( // file types
-	'image' => 'jpg,gif,png',
-	'pdf' => 'pdf'
-);
+// website root path
+fm_settings::$url_root = DOCROOT; 
+// base path for FileMan
+fm_settings::$fm_root  = DOCROOT . "/files"; 
+// file types [label] = extensions
+fm_settings::$upload_types['image'] = 'jpg,gif,png';
+fm_settings::$upload_types['pdf'] = 'pdf';
 /* end user settings */
 
+class fm_settings {
 const json_flags = JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR;
-
+static $url_root = '';  // website root path
+static $fm_root = DOCROOT . "/files"; // base path for FileMan
+static $upload_types = array(); // file types
 static $perms = array();
 
 static function url() {
@@ -36,21 +38,21 @@ static function url() {
 static function path($path, $from='fm', $to='file') {
 	switch($from) { // get file path
 		case 'url': 
-			$filepath = self::url_root . $path;
+			$filepath = self::$url_root . $path;
 			break;
 		case 'file':
 			$filepath = $path;
 			break;
 		case 'fm' : 
 		default:
-			$filepath = self::fm_root . DIRECTORY_SEPARATOR . $path ;
+			$filepath = self::$fm_root . DIRECTORY_SEPARATOR . $path ;
 	}
 	// return appropriate root if filepath is invalid
 	$filepath = realpath($filepath);
 	if(!$filepath) return ''; 
 	switch($to) {
-		case 'url': $root = self::url_root; break;
-		case 'fm': $root = self::fm_root; break;
+		case 'url': $root = self::$url_root; break;
+		case 'fm': $root = self::$fm_root; break;
 		case 'file':
 		default:
 			$root = '';
