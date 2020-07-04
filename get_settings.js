@@ -19,6 +19,7 @@ FileMan.dlg.get_settings = {
 					htm: e
 				};
 			}
+			if(data.status=='error') data.htm = '<div class="ui-state-error">'+data.htm+'</li>';
 			$('#fm-get_settings').html(data.htm).dialog('open');
 		});
 	},
