@@ -1,29 +1,4 @@
 <?php 
-/* user settings */
-require_once "$_SERVER[DOCUMENT_ROOT]/common.php";
-/* permissions */
-if(HattSite::$siteACL->hasPermission('inventory_view')) {
-	fm_settings::$perms[] = 'get_dir';
-	fm_settings::$perms[] = 'get_file';
-}
-if(HattSite::$siteACL->hasPermission('inventory_edit')) {
-	fm_settings::$perms[] = 'add_file';
-	fm_settings::$perms[] = 'del_file';
-}
-if(HattSite::$siteACL->hasPermission('site_admin')) {
-	fm_settings::$perms[] = 'add_dir';
-	fm_settings::$perms[] = 'del_dir';
-	fm_settings::$perms[] = 'get_settings';
-}
-// website root path
-fm_settings::$url_root = DOCROOT; 
-// base path for FileMan
-fm_settings::$fm_root  = DOCROOT . "/files"; 
-// file types [label] = extensions
-fm_settings::$upload_types['image'] = 'jpg,gif,png';
-fm_settings::$upload_types['pdf'] = 'pdf';
-/* end user settings */
-
 class fm_settings {
 const json_flags = JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR;
 static $url_root = '';  // website root path
@@ -66,5 +41,10 @@ static function perms($perm_name) {
 }
 	
 } // class fm_settings
+
+// user config 
+$include = __DIR__ . '/config.php';
+if(file_exists($include)) include $include;
+
 // Allow those who can get_file to preview_file
 if(in_array('get_file', fm_settings::$perms)) fm_settings::$perms[] = 'preview_file';
