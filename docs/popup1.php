@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>FileMan - popup 1</h1>
-<p><a href=".">back</a></p>
+<p class="nav"><a class="icon-undo" href=".">back</a></p>
 <h2>Dialog</h2>
 
 <?php include_once dirname(__DIR__) . '/include.php';?>
@@ -52,6 +52,11 @@ $(function() {
 &lt;/script&gt;
 </pre>
 
-<p><a href=".">back</a></p>
+<p class="nav"><a class="icon-undo" href=".">back</a></p>
+<script>
+$(function() {
+	$('.nav .icon-undo').button();
+}
+</script>
 </body>
 </html>
