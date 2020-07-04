@@ -10,7 +10,7 @@ console.log(url);
 
 FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', src: url+'/plupload.full.min.js'}]);
 FileMan.head.push(['script', {type:'text/javascript', charset:'UTF-8', src: url+'/jquery.plupload.queue.min.js'}]);
-FileMan.head.push(['link', {type:'text/css', rel:'stylesheet', href: url+'/jquery.plupload.queue.css'}]);
+FileMan.head.push(['link', {type:'text/css', rel:'stylesheet', href: url+'/css/jquery.plupload.queue.css'}]);
 
 const dlg_add_file = {
 	selector: false,
