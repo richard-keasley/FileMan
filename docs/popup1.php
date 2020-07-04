@@ -22,14 +22,15 @@
 <p>Here is the value: <span id="get_file"></span></p>
 <script>
 $(function() {
-	$('button[name=popup]').click(function(){ 
+	var $btn = $('button[name=popup]').button();
+	$btn.click(function(){ 
 		var fileman_dialog = FileMan.init();
 		FileMan.get_file = function(listitem) {
 			$('#get_file').html(FileMan.item.html(listitem));
 			fileman_dialog.dialog('close');
 		};
 		fileman_dialog.dialog('open'); 
-	});
+	});	
 });
 </script>
 
