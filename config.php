@@ -26,3 +26,5 @@ fm_settings::$fm_root  = DOCROOT . "/files";
 // file types [label] = extensions
 fm_settings::$upload_types['image'] = 'jpg,gif,png';
 fm_settings::$upload_types['pdf'] = 'pdf';
+
+echo '######';
