@@ -93,7 +93,7 @@ const FileMan = {
 		else {
 			if(!msg) msg = '-';
 			state = status=='error' ? 'error' : 'highlight';
-			FileMan.els.msg.append('<li class="ui-state-'+state+' icon-' + status + '"></span>' + msg + '</div>');
+			FileMan.els.msg.append('<li class="ui-state-'+state+' icon-'+status+'">'+msg+'</div>');
 		}
 	},
 	preview_file: function(listitem) {

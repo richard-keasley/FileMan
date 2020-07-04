@@ -19,18 +19,14 @@ else { ?>
 <script>
 const FileMan = {
 	init: function(selector=false) {
-		var html = 'error';
-		if(selector) {
-			return $(selector).html(html);
-		}
-		else {
-			return $('<div id="fm-main">'+html+'<div>').dialog({
+		var html = '<div class="ui-state-error icon-error">Access denied</div>');
+		return selector ? 
+			$(selector).html(html) : 
+			$('<div id="fm-main">'+html+'<div>').dialog({
 				autoOpen: true,
 				modal: true,
 			});
-		}
 	}
 };
-console.log(FileMan);
 </script>
 <?php }
