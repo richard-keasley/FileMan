@@ -26,7 +26,7 @@ $(function() {
 		toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | link image FileMan",
 		setup: function(editor) { 
 			editor.ui.registry.addButton('FileMan', {
-				text: 'media', // the text to display alongside the button
+				text: 'FileMan', // the text to display alongside the button
 				icon: 'image', // the icon to display alongside the button
 				onAction: function(_) {
 					var fileman_element = FileMan.init();
