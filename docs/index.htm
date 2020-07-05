@@ -14,14 +14,12 @@
 <body>
 <h1>FileMan</h1>
 
-<h2>Introduction</h2>
-<p>There are three verbs: "get", "add", "del". These three verbs act on the following objects: "file", "dir", "settings". A command comprises (verb)_(object). E.g. <code>get_dir, del_dir, get_settings</code>. </p>
-
 <h2>installation</h2>
 <p>Copy the entire folder. Make sure it sits within your Website root path.</p>
 <p>Plug-ins can be included as <code>(command).js</code>. There may be other helper files associated with the plug-in. They should all be named <code>(command)*</code>. <strong>Example:</strong> <code>add_file.js</code>, <code>add_file.php</code> are used to run the command "add_file".</p>
+<p>You need to create <a href="config.htm">config.php</a> for your application.</p>
 
-<h3>Dependencies</h3>
+<h2>Dependencies</h2>
 <dl>
 <dt>PHP</dt>
 <dd>Nothing extreme</dd>
@@ -31,30 +29,6 @@
 <dd><a href="https://www.plupload.com/">Plupload (Queue widget)</a> is used as (<code>add_file</code>). It can be replaced if you want.</dd>
 <dt>icomoon font</dt>
 <dd><a href="https://icomoon.io/">IcoMoon font</a> is used to create icons. <a href="../icomoon/">View the icon set</a>.</dd>
-</dl>
-
-<h2>Settings</h2>
-<p>Settings are all in <code>settings.php</code>. Settings are read-only from the front-end. Edit them directly in the php script.</p>
-
-<dl>
-<dt>Permissions</dt>
-<dd>Nothing will work until permissions have been set. Permissions are held in the static array <code>perms</code> in <code>settings.php</code>.</dd>
-<dd><strong>Example:</strong> Permission to get a directory is granted as follows: <code>fm_settings::$perms[] = 'get_dir';</code></dd>
-<dd><strong>NB:</strong> You can't do anything if you don't have permission "get_dir". Make sure it's the first permission set.</dd>
-<dd>Possbible permissions are: get_dir, get_file, add_dir, add_file, del_dir, del_file, get_settings.</dd>
-
-<dt>url_root</dt>
-<dd>Website root path. Used to calculate HTML for file items (e.g. get_file).</dd>
-<dd><strong>NB:</strong> If file is outside of <code>url_root</code> HTML values will be returned empty.</dd>
-
-<dt>fm_root</dt>
-<dd>base path for FileMan. The FileMan can not work outside of this path.</dd>
-<dd><strong>NB:</strong> If <code>fm_root</code> is outside of <code>url_root</code> HTML values will be returned empty.</dd>
-
-<dt>upload_types</dt> 
-<dd>Use <code>type=>extensions</code>.</dd>
-<dd><strong>Example:</strong> <code>'image' => 'jpg,gif,png'</code>. Only files with the given extensions can be uploaded. The FileMan can filtered to only allow the extensions in the filtered type to be shown or uploaded.</dd>
-<dd><strong>File icons</strong> are set according to <code>upload_type filter</code>.</dd>
 </dl>
 
 <h2>Implementation</h2>
