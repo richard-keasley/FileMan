@@ -14,7 +14,7 @@
 <body>
 <h1>FileMan - TinyMCE</h1>
 <p class="nav"><a class="icon-undo" href=".">back</a></p>
-<h2>TinyMCE integration</h2>
+<h2>TinyMCE integration for inserting images / downloads into HTML</h2>
 
 <textarea class="html"></textarea>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.4.0/tinymce.min.js"></script>
