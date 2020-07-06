@@ -1,7 +1,7 @@
 <?php
-/* Template for config.php */
-// Read documentation on config.php
-// Edit this file and save as "config.php"
+// Read documentation on fileman.settings.php
+// Edit this file and save in the parent folder of fileman
+// fileman will not run if this file is not setup correctly 
 
 /* add any site requirements here */
 # require_once '{all the files your site needs}';
@@ -25,7 +25,7 @@ if('user is a site admin') {
 fm_settings::$url_root = $_SERVER['DOCUMENT_ROOT']; 
 
 // base path for FileMan browsing
-fm_settings::$fm_root  = {path to your files}; 
+fm_settings::$fm_root  = '{path to your files}'; 
 
 // upload_types [label] = extensions
 fm_settings::$upload_types['image'] = 'jpg,gif,png';

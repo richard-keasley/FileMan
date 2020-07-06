@@ -9,14 +9,13 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
 <link href="../icomoon/style.css" rel="stylesheet" type="text/css" media="all">
-<title>FileMan - config</title>
+<title>FileMan - settings</title>
 </head>
 <body>
-<h1>FileMan - config</h1>
+<h1>FileMan - settings</h1>
 
-<p>FileMan will attempt to load <code>config.php</code>. You can create <code>config.php</code> from the tempalte <code>config-dist.php</code>. If <code>config.php</code> is not found, the default settings will be used and it is highly likely there will be no permissions for any functionality.</p>
-
-<p>Settings are read-only from the front end, you have to edit <code>config.php</code>.</p>
+<p>FileMan will attempt to load <code>../fileman.settings.php</code>. You can create the settings file from the template <code>fileman.settings.php</code>. Save this in the <strong>parent folder</strong> of FileMan. If no settings file is found, FileMan will return the following message:</p> 
+<div class="ui-state-error icon-error">No access to FileMan</div>
 
 <h3>Settings</h3>
 <dl>
@@ -41,7 +40,7 @@
 <dd><strong>File icons</strong> are set according to <code>upload_type filter</code>.</dd>
 </dl>
 
-<p>An example <code>config.php</code>:</p>
+<p>An example <code>../fileman.settings.php</code>:</p>
 <pre>
 &lt;?php
 require_once {all the files your site needs};

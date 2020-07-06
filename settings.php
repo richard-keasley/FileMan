@@ -1,8 +1,9 @@
 <?php 
-// user config 
-$include = dirname(__DIR__) . '/fileman.config.php';
+// user settings 
+$include = dirname(__DIR__) . '/fileman.settings.php';
 if(file_exists($include)) include $include;
 echo $include;
+var_dump(fm_settings);
 
 // Allow those who can get_file to preview_file
 if(in_array('get_file', fm_settings::$perms)) fm_settings::$perms[] = 'preview_file';
