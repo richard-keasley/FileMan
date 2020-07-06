@@ -50,7 +50,7 @@ $(function() {
 $(function() {
 	tinymce.init({
 		selector:'textarea[class=html]',
-		toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | link image FileMan",
+		toolbar: "undo redo | link image FileMan",
 		setup: function(editor) { 
 			editor.ui.registry.addButton('FileMan', {
 				text: 'FileMan', // the text to display alongside the button
