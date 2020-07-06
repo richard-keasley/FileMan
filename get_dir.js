@@ -75,6 +75,7 @@ const FileMan = {
 			msg: jq.find('.msg'),
 			htm: jq.find('.htm'),
 		};
+		jq.find('.buttonbar button').button();
 		
 		FileMan.filter = filter;
 		FileMan.process({get_dir:fm_path});
