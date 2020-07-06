@@ -1,4 +1,8 @@
 <?php
+/* Template for config.php */
+// Read documentation on config.php
+// Edit this file and save as "config.php"
+
 /* add any site requirements here */
 # require_once '{all the files your site needs}';
 
