@@ -2,6 +2,7 @@
 // user config 
 $include = dirname(__DIR__) . '/fileman.config.php';
 if(file_exists($include)) include $include;
+echo $include;
 
 // Allow those who can get_file to preview_file
 if(in_array('get_file', fm_settings::$perms)) fm_settings::$perms[] = 'preview_file';
