@@ -30,3 +30,6 @@ fm_settings::$fm_root  = '{path to your files}';
 // upload_types [label] = extensions
 fm_settings::$upload_types['image'] = 'jpg,gif,png';
 fm_settings::$upload_types['pdf'] = 'pdf';
+
+// max size for file upload (0 = no limit)
+fm_settings::$max_file_size = '500kb';

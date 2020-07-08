@@ -11,6 +11,8 @@ const json_flags = JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR;
 static $url_root = '';  // website root path
 static $fm_root = ''; // base path for FileMan
 static $upload_types = array(); // file types
+static $max_file_size = 0; // only for upload 
+
 static $perms = array();
 
 static function url() {

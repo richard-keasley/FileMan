@@ -4,6 +4,7 @@ if(fm_settings::perms('get_dir')) {
 	$fm_settings = array(
 		'perms' => fm_settings::$perms,
 		'url' => fm_settings::url(),
+		'max_file_size' => fm_settings::max_file_size,
 		'upload_types' => fm_settings::$upload_types
 	);
 	?>

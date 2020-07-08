@@ -42,7 +42,7 @@ const dlg_add_file = {
 			},
 
 			filters: {
-				max_file_size : '400kb',
+				max_file_size : fm_settings.max_file_size,
 				prevent_duplicates: true,
 				mime_types: mime_types
 			},
