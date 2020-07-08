@@ -83,6 +83,7 @@ static function get_settings() {
 		'web_root' => fm_settings::$url_root,
 		'file_manager_root' => fm_settings::$fm_root,
 		'file_manager_url' => fm_settings::url(),
+		'max_file_size' => fm_settings::$max_file_size,
 		'upload_types' => fm_settings::$upload_types,
 		'perms' => implode(', ', fm_settings::$perms)
 	);
