@@ -30,7 +30,7 @@ FileMan.dlg.get_settings = {
 	},
 	dlg: $('<div id="fm-get_settings" title="Settings"></div>').dialog({
 		autoOpen: false,
-		height: 300,
+		height: 600,
 		width: 700,
 		modal: true,
 		buttons: { 
