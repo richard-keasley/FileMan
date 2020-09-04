@@ -100,12 +100,12 @@ static function get_settings() {
 		echo "</li>";
 	}
 	echo '</ul>';
+$include = dirname($list['file_manager_url']) . '/fileman.settings.php';
 echo <<<EOT
 <hr>
-<p>Modify settings in <code>$list[file_manager_url]/settings.php</code>.</p>
+<p>Modify settings in <code>$include</code>.</p>
 <p><a href="$list[file_manager_url]/docs/" target="docs">Read how to setup</a></p>
 EOT;
-	
 	get_dir_die(0, 'done');
 }
 
