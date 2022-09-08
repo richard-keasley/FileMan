@@ -7,4 +7,3 @@ Simple File Manager for website content, compatible with Tiny MCE.
 - *plupload:* Plupload is included in the plug-in add_file. It can be replaced if you want. Plupload uses jQuery and jQuery-ui.
 - *icomoon font:* IcoMoon font is used to create icons.
 
-what here
