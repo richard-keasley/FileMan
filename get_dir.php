@@ -79,32 +79,34 @@ static function check_access($function) {
 
 static function get_settings() {
 	self::check_access(__FUNCTION__);
-	$list = array(
+	echo '<ul>';
+	$list = [
+		'version' => fm_settings::version,
+		'released' => fm_settings::released,
 		'web_root' => fm_settings::$url_root,
 		'file_manager_root' => fm_settings::$fm_root,
 		'file_manager_url' => fm_settings::url(),
 		'max_file_size' => fm_settings::$max_file_size,
 		'upload_types' => fm_settings::$upload_types,
 		'perms' => implode(', ', fm_settings::$perms)
-	);
-	
-	echo '<ul>';
+	];
 	foreach($list as $key=>$item) {
-		echo "<li><strong>$key:</strong> ";
+		echo "<li><strong>{$key}:</strong> ";
 		if(is_array($item)) {
 			echo '<ul>';
-			foreach($item as $subkey=>$subitem) echo "<li><strong>$subkey:</strong> $subitem</li>";
+			foreach($item as $subkey=>$subitem) echo "<li><strong>{$subkey}:</strong> {$subitem}</li>";
 			echo '</ul>';
 		}
 		else echo $item;
 		echo "</li>";
 	}
+	
 	echo '</ul>';
-$include = dirname($list['file_manager_url']) . '/fileman.settings.php';
-echo <<<EOT
+	$include = dirname($list['file_manager_url']) . '/fileman.settings.php';
+	echo <<<EOT
 <hr>
-<p>Modify settings in <code>$include</code>.</p>
-<p><a href="$list[file_manager_url]/docs/" target="docs">Read how to setup</a></p>
+<p>Modify settings in <code>{$include}</code>.</p>
+<p><a href="{$list['file_manager_url']}/docs/" target="docs">Read how to setup</a></p>
 EOT;
 	get_dir_die(0, 'done');
 }

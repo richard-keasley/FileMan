@@ -8,6 +8,9 @@ if(in_array('get_file', fm_settings::$perms)) fm_settings::$perms[] = 'preview_f
 
 class fm_settings {
 const json_flags = JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR;
+const version = '1.1.0';
+const released = '2023-02-07';
+
 static $url_root = '';  // website root path
 static $fm_root = ''; // base path for FileMan
 static $upload_types = array(); // file types

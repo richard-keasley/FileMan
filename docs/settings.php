@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="description" content="FileMan File Manager">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Richard Keasley">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
-<link href="../icomoon/style.css" rel="stylesheet" type="text/css" media="all">
-<title>FileMan - settings</title>
-</head>
-<body>
+<?php include __DIR__ . '/_head.php';?>
+
 <h1>FileMan - settings</h1>
 
 <p>FileMan will attempt to load <code>../fileman.settings.php</code>. You can create the settings file from the template <code>fileman.settings.php</code>. Save this in the <strong>parent folder</strong> of FileMan. If no settings file is found, FileMan will return the following message:</p> 
@@ -66,5 +54,5 @@ fm_settings::$fm_root  = {path to your files};
 fm_settings::$upload_types['image'] = 'jpg,gif,png';
 fm_settings::$upload_types['pdf'] = 'pdf';
 </pre>
-</body>
-</html>
+
+<?php include __DIR__ . '/_foot.php';
