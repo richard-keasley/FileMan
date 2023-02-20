@@ -21,6 +21,7 @@ const dlg_add_file = {
 	open: function(destpath) {
 		if(dlg_add_file.selector) dlg_add_file.selector.dialog('open');
 		else {
+			// create upload dialogue
 			dlg_add_file.selector = $('<div id="fm-add_file"></div>')
 			.html('<div>Your browser does not support uploads.</div><pre></pre>')
 			.dialog({
@@ -44,7 +45,8 @@ const dlg_add_file = {
 		}
 		dlg_add_file.selector.find('div').pluploadQueue({
 			// General settings
-			runtimes : 'html5',
+			//runtimes : 'html5,flash,html4',
+			
 			url: fm_settings.url + '/add_file.php', 
 
 			max_file_count: 20,
@@ -114,14 +116,11 @@ const dlg_add_file = {
 }
 FileMan.buttonbar += '<button data-process="add_file" title="upload files" onclick="FileMan.dlg.add_file();"></button>';
 
-$(function() {
-	$(function() { 
-		FileMan.dlg.add_file = function() {
-			dlg_add_file.close = function() { 
-				FileMan.process({get_dir: FileMan.dir});
-			}
-			dlg_add_file.open(FileMan.dir);
-		};
-	});
+$(function() { 
+FileMan.dlg.add_file = function() {
+	dlg_add_file.close = function() { 
+		FileMan.process({get_dir: FileMan.dir});
+	}
+	dlg_add_file.open(FileMan.dir);
+};
 });
-
